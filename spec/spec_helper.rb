@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "site_response_times"
+require 'pry-rails'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
