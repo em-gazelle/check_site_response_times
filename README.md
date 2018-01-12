@@ -1,6 +1,6 @@
 # SiteResponseTimes
 
-This gem provides a CLI to check average response times. Gem defaults to checking https://about.gitlab.com 10 
+This gem provides a CLI to check average response times. Gem defaults to checking https://about.gitlab.com 6 
 times with requests being spaced 10 seconds apart.
 
 ## Installation
