@@ -1,7 +1,7 @@
 # SiteResponseTimes
 
 This gem provides a CLI to check average response times. Gem defaults to checking https://about.gitlab.com 6 
-times with requests being spaced 10 seconds apart.
+times with requests being spaced 10 seconds apart. You can specify the URL to make an HTTP GET request to, as well as the number of times to make the request and the number of seconds you'd like to wait between requests.
 
 ## Installation
 
@@ -9,6 +9,11 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'site_response_times'
+```
+or:
+
+```ruby
+gem 'site_response_times', git: "git://github.com/em-gazelle/check_site_response_times.git"
 ```
 
 And then execute:
@@ -21,8 +26,11 @@ Or install it yourself as:
 
 ## Usage
 
-Run `thor response_time:average` from the command line. 
-Optionally, you can provide an alternative url to check: `thor response_time:average url`
+	$ thor response_time:average
+
+Optionally, you can provide an alternative url to check, as well as adjust the amount of time to wait between requests (default is 10 seconds) and the number of requests to make (default is 6).
+
+	$ thor response_time:average url:your_url times_to_run:positive_integer seconds_between_requests:positive_integer
 
 ## Development
 
