@@ -1,0 +1,11 @@
+require "thor"  
+require "thor/group"  
+require './lib/site_response_times/response_time'
+
+class ResponseTime < Thor  
+
+  Thor.register(ResponseTime, 'response_time', 'average', 'Commands for avg response time')
+
+end
+
+ResponseTime.start()
